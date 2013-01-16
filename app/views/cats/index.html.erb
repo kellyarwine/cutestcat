@@ -19,9 +19,13 @@
 </tr>
 </table>
 <br/><br/>
-<h2>Most Votes</h2><!--<%= @top_cat.picture.url%><br>-->
-<img height="600" width="600" src=<%= @top_cat.picture.url%>>
-
+<h2>Cutest Cat Leaderboard</h2>
+<% @top_cat.each do |cat| %>
+<table>
+<tr><td><%= image_tag cat.picture.url, :size => "200x200" %></td>
+  <td><%= cat.yesvotes %> Votes</td></tr>
+<% end %>
+</table>
 
 <br/>
 

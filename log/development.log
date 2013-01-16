@@ -38066,3 +38066,482 @@ Served asset /home.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-16 10:24:05 -0600
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-16 13:05:36 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (1.0ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.8ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 5
+  Rendered cats/index.html.erb within layouts/application (50.8ms)
+Completed 500 Internal Server Error in 302ms
+
+ActionView::Template::Error (undefined method `picture' for #<ActiveRecord::Relation:0x007fbff5dfa798>):
+    19: </tr>
+    20: </table>
+    21: <br/><br/>
+    22: <h2>Cutest Cat Leaderboard</h2><!--<%= @top_cat.picture.url%><br>-->
+    23: <% @top_cat.each do %>
+    24: <table>
+    25:   <tr>
+  app/views/cats/index.html.erb:22:in `_app_views_cats_index_html_erb___1314925269438821260_70231220490340'
+  app/controllers/cats_controller.rb:10:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (21.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (59.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-16 13:11:20 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.3ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.3ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 5
+  Rendered cats/index.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (undefined method `picture' for #<ActiveRecord::Relation:0x007fbffa034b90>):
+    19: </tr>
+    20: </table>
+    21: <br/><br/>
+    22: <h2>Cutest Cat Leaderboard</h2><!--<%= @top_cat.picture.url%><br>-->
+    23: <% @top_cat.each do %>
+    24: <table>
+    25:   <tr>
+  app/views/cats/index.html.erb:22:in `_app_views_cats_index_html_erb___1314925269438821260_70231255012260'
+  app/controllers/cats_controller.rb:10:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-16 13:11:23 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.3ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 5
+  Rendered cats/index.html.erb within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `picture' for #<ActiveRecord::Relation:0x007fbff416c720>):
+    19: </tr>
+    20: </table>
+    21: <br/><br/>
+    22: <h2>Cutest Cat Leaderboard</h2><!--<%= @top_cat.picture.url%><br>-->
+    23: <% @top_cat.each do %>
+    24: <table>
+    25:   <tr>
+  app/views/cats/index.html.erb:22:in `_app_views_cats_index_html_erb___1314925269438821260_70231255012260'
+  app/controllers/cats_controller.rb:10:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-16 13:26:51 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+ERROR: compiling _app_views_cats_index_html_erb___1314925269438821260_70231218876200 RAISED /Users/Kelly/cutestcat/app/views/cats/index.html.erb:27: syntax error, unexpected ',', expecting ')'
+...= ( image_tag (cat.picture.url, :size => "200x200"), cat );@...
+...                               ^
+/Users/Kelly/cutestcat/app/views/cats/index.html.erb:27: syntax error, unexpected ')', expecting keyword_end
+...url, :size => "200x200"), cat );@output_buffer.safe_concat('
+...                               ^
+Function body:           def _app_views_cats_index_html_erb___1314925269438821260_70231218876200(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "cats/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>Which cat is the cutest?</h1>
+<p>You be the judge.</p>
+<br/>
+<br/>
+<table>
+  <tr>
+    <td><h1>');@output_buffer.append= ( link_to "This Cat", cat_yes_path(@cat2.id, @cat1.id));@output_buffer.safe_concat('</h1>
+    </td>
+    <td><h1>');@output_buffer.append= ( link_to "That Cat", cat_yes_path(@cat1.id, @cat2.id));@output_buffer.safe_concat('</h1>
+    </td>
+</tr>
+  <tr>
+  	<td>
+    <img height="500" width="500" src=');@output_buffer.append= ( @cat2.picture.url);@output_buffer.safe_concat('>
+    </td>
+    <td>
+    <img height="600" width="600" src=');@output_buffer.append= ( @cat1.picture.url);@output_buffer.safe_concat('>
+    </td>
+</tr>
+</table>
+<br/><br/>
+<h2>Cutest Cat Leaderboard</h2><!--');@output_buffer.append= ( @top_cat.picture.url);@output_buffer.safe_concat('<br>-->
+'); @top_cat.each do 
+@output_buffer.safe_concat('<table>
+  <tr>
+    <td>
+      ');@output_buffer.append= ( image_tag (cat.picture.url, :size => "200x200"), cat );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    </td>
+    <td>
+      ');@output_buffer.append= ( cat.yesvotes );@output_buffer.safe_concat('Votes</td>
+  </tr>
+');       end 
+@output_buffer.safe_concat('</table>
+<img height="600" width="600" src=');@output_buffer.append= ( @top_cat.picture.url);@output_buffer.safe_concat('>
+
+
+<br/>
+
+
+<br/>
+<h1>');@output_buffer.append= ( link_to "NEW CAT", new_cat_path);@output_buffer.safe_concat('</h1>
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_view/template.rb:285:in `module_eval'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_view/template.rb:285:in `compile'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_view/template.rb:233:in `compile!'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_view/template.rb:142:in `block in render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.2/lib/active_support/notifications.rb:125:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_view/template.rb:141:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_view/renderer/template_renderer.rb:42:in `block (2 levels) in render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.2/lib/active_support/notifications.rb:123:in `block in instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.2/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.2/lib/active_support/notifications.rb:123:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_view/renderer/template_renderer.rb:41:in `block in render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_view/renderer/template_renderer.rb:49:in `render_with_layout'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_view/renderer/template_renderer.rb:40:in `render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_view/renderer/template_renderer.rb:13:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_view/renderer/renderer.rb:17:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/abstract_controller/rendering.rb:109:in `_render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/abstract_controller/rendering.rb:88:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_controller/metal/rendering.rb:16:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.2/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.2/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.2/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+/Users/Kelly/cutestcat/app/controllers/cats_controller.rb:10:in `index'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/abstract_controller/base.rb:167:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:414:in `_run__1627023483815737209__process_action__3843428479334255658__callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:405:in `__run_callback'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.2/lib/active_support/notifications.rb:123:in `block in instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.2/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.2/lib/active_support/notifications.rb:123:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.2/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/abstract_controller/base.rb:121:in `process'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/abstract_controller/rendering.rb:45:in `process'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_controller/metal.rb:203:in `dispatch'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_controller/metal.rb:246:in `block in action'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/routing/route_set.rb:67:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/routing/route_set.rb:30:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/journey-1.0.3/lib/journey/router.rb:68:in `block in call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/journey-1.0.3/lib/journey/router.rb:56:in `each'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/journey-1.0.3/lib/journey/router.rb:56:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/routing/route_set.rb:594:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/etag.rb:23:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/conditionalget.rb:25:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/head.rb:14:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/cookies.rb:338:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.2/lib/active_record/query_cache.rb:64:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activerecord-3.2.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:405:in `_run__2518900354017080957__call__3502871309524461904__callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:405:in `__run_callback'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.2/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.2/lib/rails/rack/logger.rb:26:in `call_app'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.2/lib/rails/rack/logger.rb:16:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.2/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/static.rb:61:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.2/lib/rails/engine.rb:479:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.2/lib/rails/application.rb:220:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.2/lib/rails/rack/log_tailer.rb:14:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/handler/webrick.rb:59:in `service'
+/usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/usr/local/rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered cats/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (/Users/Kelly/cutestcat/app/views/cats/index.html.erb:27: syntax error, unexpected ',', expecting ')'
+...= ( image_tag (cat.picture.url, :size => "200x200"), cat );@...
+...                               ^
+/Users/Kelly/cutestcat/app/views/cats/index.html.erb:27: syntax error, unexpected ')', expecting keyword_end
+...url, :size => "200x200"), cat );@output_buffer.safe_concat('
+...                               ^):
+    24: <table>
+    25:   <tr>
+    26:     <td>
+    27:       <%= image_tag (cat.picture.url, :size => "200x200"), cat %>
+    28:     </td>
+    29:     <td>
+    30:       <%= cat.yesvotes %>Votes</td>
+  app/controllers/cats_controller.rb:10:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-16 13:27:13 -0600
+Processing by CatsController#index as HTML
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2
+  [1m[36mCat Load (0.3ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 5[0m
+  Rendered cats/index.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `picture' for #<ActiveRecord::Relation:0x007fbffa03ab30>):
+    19: </tr>
+    20: </table>
+    21: <br/><br/>
+    22: <h2>Cutest Cat Leaderboard</h2><!--<%= @top_cat.picture.url%><br>-->
+    23: <% @top_cat.each do %>
+    24: <table>
+    25:   <tr>
+  app/views/cats/index.html.erb:22:in `_app_views_cats_index_html_erb___1314925269438821260_70231255007700'
+  app/controllers/cats_controller.rb:10:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-16 13:27:59 -0600
+Processing by CatsController#index as HTML
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 5[0m
+  Rendered cats/index.html.erb within layouts/application (7.5ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined method `picture' for #<ActiveRecord::Relation:0x007fbff781fe20>):
+    19: </tr>
+    20: </table>
+    21: <br/><br/>
+    22: <h2>Cutest Cat Leaderboard</h2><!--<%= @top_cat.picture.url%><br>-->
+    23: <% @top_cat.each do %>
+    24: <table>
+    25:   <tr>
+  app/views/cats/index.html.erb:22:in `_app_views_cats_index_html_erb___1314925269438821260_70231233981680'
+  app/controllers/cats_controller.rb:10:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.0ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.7ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateCats (20120417213549)
+Migrating to AddPictureToCats (20120510231824)
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("cats")
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-16 13:28:42 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 5
+  Rendered cats/index.html.erb within layouts/application (12.4ms)
+Completed 500 Internal Server Error in 101ms
+
+ActionView::Template::Error (undefined method `picture' for #<ActiveRecord::Relation:0x007fd9fcc81d28>):
+    19: </tr>
+    20: </table>
+    21: <br/><br/>
+    22: <h2>Cutest Cat Leaderboard</h2><!--<%= @top_cat.picture.url%><br>-->
+    23: <% @top_cat.each do %>
+    24: <table>
+    25:   <tr>
+  app/views/cats/index.html.erb:22:in `_app_views_cats_index_html_erb___4114803735039170936_70287110717100'
+  app/controllers/cats_controller.rb:10:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (25.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (38.9ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateCats (20120417213549)
+Migrating to AddPictureToCats (20120510231824)
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("cats")
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-16 13:29:51 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 5
+  Rendered cats/index.html.erb within layouts/application (11.5ms)
+Completed 500 Internal Server Error in 77ms
+
+ActionView::Template::Error (undefined method `picture' for #<ActiveRecord::Relation:0x007f8eca3e8c98>):
+    19: </tr>
+    20: </table>
+    21: <br/><br/>
+    22: <h2>Cutest Cat Leaderboard</h2><!--<%= @top_cat.picture.url%><br>-->
+    23: <% @top_cat.each do %>
+    24: <table>
+    25:   <tr>
+  app/views/cats/index.html.erb:22:in `_app_views_cats_index_html_erb___3148116494430086815_70125626538540'
+  app/controllers/cats_controller.rb:10:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (24.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (38.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-16 13:30:14 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 5
+  Rendered cats/index.html.erb within layouts/application (163.9ms)
+Completed 500 Internal Server Error in 167ms
+
+ActionView::Template::Error (undefined local variable or method `cat' for #<#<Class:0x007f8eca3f6690>:0x007f8eca0d5c90>):
+    24: <table>
+    25:   <tr>
+    26:     <td>
+    27:       <%= image_tag cat.picture.url, :size => "200x200" %>
+    28:     </td>
+    29:     <td>
+    30:       <%= cat.yesvotes %>Votes</td>
+  app/views/cats/index.html.erb:27:in `block in _app_views_cats_index_html_erb___3148116494430086815_70125627797520'
+  app/views/cats/index.html.erb:23:in `_app_views_cats_index_html_erb___3148116494430086815_70125627797520'
+  app/controllers/cats_controller.rb:10:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-16 13:30:24 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 5
+  Rendered cats/index.html.erb within layouts/application (11.9ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined method `picture' for #<ActiveRecord::Relation:0x007f8eca4cd0f0>):
+    31:   </tr>
+    32:       <% end %>
+    33: </table>
+    34: <img height="600" width="600" src=<%= @top_cat.picture.url%>>
+    35: 
+    36: 
+    37: <br/>
+  app/views/cats/index.html.erb:34:in `_app_views_cats_index_html_erb___3148116494430086815_70125628060480'
+  app/controllers/cats_controller.rb:10:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-16 13:33:04 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 5
+  Rendered cats/index.html.erb within layouts/application (12.1ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined method `picture' for #<ActiveRecord::Relation:0x007f8eca5c5f70>):
+    27: <% end %>
+    28: </table>
+    29: 
+    30: <img height="600" width="600" src=<%= @top_cat.picture.url%>>
+    31: 
+    32: 
+    33: <br/>
+  app/views/cats/index.html.erb:30:in `_app_views_cats_index_html_erb___3148116494430086815_70125628578380'
+  app/controllers/cats_controller.rb:10:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-16 13:33:37 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 5
+  Rendered cats/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 136ms (Views: 133.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-16 13:33:37 -0600
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-16 13:33:37 -0600
+Served asset /cats.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-16 13:33:37 -0600
+Served asset /home.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-16 13:33:37 -0600
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-16 13:33:37 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-16 13:33:37 -0600
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-16 13:33:37 -0600
+Served asset /cats.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-16 13:33:37 -0600
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-16 13:33:37 -0600
+Served asset /application.js - 304 Not Modified (5ms)
