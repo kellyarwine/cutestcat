@@ -37969,3 +37969,100 @@ Served asset /cats.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-05-17 21:00:16 -0400
 Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-16 10:21:08 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (36.9ms)
+Compiled cats.css  (61ms)  (pid 19979)
+Compiled home.css  (1ms)  (pid 19979)
+Compiled scaffolds.css  (18ms)  (pid 19979)
+Compiled application.css  (102ms)  (pid 19979)
+Compiled jquery.js  (2ms)  (pid 19979)
+Compiled jquery_ujs.js  (0ms)  (pid 19979)
+Compiled cats.js  (110ms)  (pid 19979)
+Compiled home.js  (61ms)  (pid 19979)
+Compiled application.js  (267ms)  (pid 19979)
+Completed 200 OK in 507ms (Views: 449.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-16 10:21:09 -0600
+Served asset /application.css - 200 OK (26ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-16 10:21:09 -0600
+Served asset /home.css - 200 OK (1ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-16 10:21:09 -0600
+Served asset /cats.css - 200 OK (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-16 10:21:09 -0600
+Served asset /scaffolds.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-16 10:21:09 -0600
+Served asset /jquery.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-16 10:21:09 -0600
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-16 10:21:09 -0600
+Served asset /cats.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-16 10:21:09 -0600
+Served asset /application.js - 200 OK (7ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-16 10:21:09 -0600
+Served asset /home.js - 200 OK (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-16 10:24:05 -0600
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.3ms)[0m  [1mSELECT "cats".* FROM "cats" ORDER BY RANDOM() LIMIT 2[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" ORDER BY yesvotes desc LIMIT 1
+  Rendered cats/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 16ms (Views: 12.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-16 10:24:05 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.css?body=1" for 127.0.0.1 at 2013-01-16 10:24:05 -0600
+Served asset /cats.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-16 10:24:05 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-16 10:24:05 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-16 10:24:05 -0600
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-16 10:24:05 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cats.js?body=1" for 127.0.0.1 at 2013-01-16 10:24:05 -0600
+Served asset /cats.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-16 10:24:05 -0600
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-16 10:24:05 -0600
+Served asset /application.js - 304 Not Modified (0ms)
